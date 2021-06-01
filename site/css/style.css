@@ -63,20 +63,28 @@ body {
 }
 
 .intro__text {
-    width: 40%;
+    width  : 45%;
+    display: flex;
 }
 
-.intro__text h1 {
-    max-width  : 405px;
-    border-left: 12px solid #F16D7F;
-    padding    : 0 0 0 16px;
+.intro__text__border {
+    width           : 12px;
+    background-color: #F16D7F;
+}
+
+.intro__text__top {
+    font-style : normal;
     font-weight: 900;
-    line-height: 58px;
+    font-size  : 48px;
+    line-height: 35px;
+    padding    : 0 0 0 16px;
 }
 
-.intro__height {
-    font-size: 48px;
-    display  : block;
+.intro__text__bottom {
+    font-weight: bold;
+    font-size  : 32px;
+    line-height: 30px;
+    padding    : 15px 0 0 16px;
 }
 
 .intro__decor {
@@ -266,7 +274,7 @@ body {
 
 .footer__main {
     height             : 448px;
-    background-image   : url(../img/footerBG.png);
+    background         : url(../img/bg\ footer.png), url(../img/footer.png);
     background-repeat  : no-repeat;
     background-position: center;
     background-size    : cover;
