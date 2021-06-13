@@ -1,0 +1,128 @@
+.header {
+    background: #222222;
+
+    &__wrap {
+        display        : flex;
+        justify-content: space-between;
+    }
+
+    &__left,
+    &__right {
+        display    : flex;
+        align-items: flex-end;
+    }
+
+    &__left {
+        padding: 18px 0 18px 0;
+    }
+
+    &__logo {
+        margin: 0 41px 0 0;
+    }
+
+    .search {
+        display: flex;
+
+        &__button {
+            cursor    : pointer;
+            background: none;
+            border    : none;
+        }
+
+        &__input {
+            display      : none;
+            margin       : 0 0 0 10px;
+            padding      : 5px;
+            border-radius: 5px;
+        }
+
+        &__input:focus {
+            outline: none;
+            display: flex;
+        }
+
+        &__input::placeholder {
+            font-weight: normal;
+            font-size  : 14px;
+            line-height: 17px;
+            color      : #222224;
+            opacity    : 0.67;
+        }
+
+        &:hover .search__input {
+            display: flex;
+        }
+    }
+
+    &__item:not(:last-child) {
+        margin: 0 33px 0 0;
+    }
+
+    &__item {
+        padding: 18px 0 18px 0;
+    }
+
+    &__item:hover .header__menu {
+        display: block;
+    }
+
+    &__button {
+        cursor  : pointer;
+        position: relative;
+    }
+
+    &__button:focus .header__menu {
+        display: block;
+    }
+
+    &__menu {
+        position  : absolute;
+        padding   : 37px 100px 34px 34px;
+        background: #FFFFFF;
+        left      : -95px;
+        top       : 45px;
+        height    : 768px;
+        box-shadow: -2px 4px 10px #dbd9d9;
+        width     : max-content;
+        display   : none;
+
+        &__list {
+            margin: 20px 0 0 0;
+
+            .menu__list li {
+                padding        : 12px 0 0 20px;
+                list-style-type: none;
+                text-align     : left;
+            }
+
+            .menu__list li>a {
+                text-decoration: none;
+                font-style     : normal;
+                font-weight    : normal;
+                font-size      : 14px;
+                line-height    : 17px;
+                color          : #6F6E6E;
+            }
+
+            .menu__list li>a:hover {
+                color: #F16D7F;
+            }
+        }
+    }
+
+    &__menu h4 {
+        text-align : left;
+        color      : #F16D7F;
+        font-weight: normal;
+        font-size  : 14px;
+        line-height: 17px;
+    }
+
+    &__menu>h4 {
+        text-align : left;
+        font-weight: bold;
+        font-size  : 14px;
+        line-height: 17px;
+        color      : #000000;
+    }
+}
