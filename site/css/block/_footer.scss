@@ -1,0 +1,145 @@
+.footer {
+    flex-shrink: 0;
+
+    & .subscribe {
+        height             : 448px;
+        background         : url(../img/bg_footer.png), url(../img/footer.jpg);
+        background-repeat  : no-repeat;
+        background-position: bottom;
+        background-size    : cover;
+
+        &__feedback {
+            flex-grow: 1;
+
+            &__info {
+                width         : 360px;
+                display       : flex;
+                flex-direction: column;
+                align-items   : center;
+
+                & p {
+                    padding   : 30px 22px 0 22px;
+                    text-align: center;
+                }
+            }
+        }
+
+        &__form {
+            flex-grow: 1;
+
+            & h4 {
+                font-weight   : bold;
+                font-size     : 24px;
+                line-height   : 40px;
+                text-align    : center;
+                text-transform: uppercase;
+            }
+
+            & h6 {
+                font-weight   : normal;
+                font-size     : 18px;
+                line-height   : 30px;
+                text-align    : center;
+                text-transform: uppercase;
+            }
+
+            & .input__submit {
+                display        : flex;
+                justify-content: center;
+                margin         : 32px 0 0 0;
+                height         : 49px;
+
+                & .mail__input {
+                    padding      : 0 20px 0 20px;
+                    width        : 256px;
+                    height       : 49px;
+                    background   : #E1E1E1;
+                    border       : none;
+                    border-radius: 25px 0 0 25px;
+
+                    &::placeholder {
+                        font-weight: normal;
+                        font-size  : 14px;
+                        line-height: 17px;
+                        color      : #222224;
+                        opacity    : 0.67;
+                    }
+
+                    &:focus::placeholder {
+                        visibility: hidden;
+                    }
+
+                    &:target {
+                        outline: none;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                & .button__submit {
+                    cursor       : pointer;
+                    width        : 100px;
+                    background   : #F16D7F;
+                    border       : none;
+                    border-radius: 0 25px 25px 0;
+                    color        : #FFFFFF;
+                    font-weight  : normal;
+                    font-size    : 14px;
+                    line-height  : 17px;
+
+                    &:focus {
+                        outline   : none;
+                        background: #E05C6E;
+                    }
+
+                    &:hover {
+                        background: #E05C6E;
+                        transition: background 0.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    &__center {
+        display    : flex;
+        height     : 100%;
+        align-items: center;
+    }
+
+    & .social {
+        padding   : 30px 0 30px 0;
+        background: #222224;
+
+        &__container {
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+
+            & .copyright p {
+                font-weight: normal;
+                font-size  : 16px;
+                line-height: 19px;
+                color      : #FBFBFB;
+            }
+        }
+
+        & .iconify__social {
+            color           : #000;
+            background-color: #fff;
+            font-size       : 32px
+        }
+
+        &__links a:not(:last-child) {
+            margin: 0 7px 0 0;
+        }
+
+        &__links a:hover .iconify__social {
+            color           : #fff;
+            background-color: #F16D7F;
+            transition      : all 0.2s;
+        }
+    }
+}
